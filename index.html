@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLogo - Votre partenaire digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+            url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                background-position: 65% center;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Section Hero avec image de fond -->
+    <div class="hero relative flex items-center justify-center text-center">
+        <!-- Overlay sombre -->
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        
+        <!-- Contenu principal -->
+        <div class="relative z-10 px-4 text-white">
+            <!-- Logo -->
+            <div class="mb-8">
+                <h1 class="text-5xl md:text-7xl font-bold tracking-wide animate-bounce">
+                    <span class="text-blue-400">i</span><span class="text-white">Logo</span>
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl font-light">Votre identité visuelle, notre passion</p>
+            </div>
+            
+            <!-- Bouton qui redirige vers index2.html -->
+            <a href="index2.html" 
+               class="inline-block mt-8 px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold rounded-full transition duration-300 transform hover:scale-110 shadow-lg">
+                Découvrez nos services →
+            </a>
+        </div>
+        
+        <!-- Flèche vers le bas -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Section à propos -->
+    <div class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12">Qui sommes-nous ?</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4">iLogo - Créateur d'identités visuelles</h3>
+                <p class="text-gray-700 mb-4">
+                    Fondée en 2010, iLogo est une agence de design spécialisée dans la création d'identités visuelles fortes et mémorables pour les entreprises de toutes tailles.
+                </p>
+                <p class="text-gray-700">
+                    Notre équipe de designers talentueux combine créativité et stratégie pour développer des logos qui racontent votre histoire et renforcent votre image de marque.
+                </p>
+            </div>
+            <div class="bg-gray-100 p-8 rounded-xl shadow-lg">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                     alt="Équipe iLogo" class="rounded-lg shadow-md">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">
+                    <span class="text-blue-400">i</span>Logo
+                </h3>
+                <p class="text-gray-400">
+                    Créateurs d'identités visuelles depuis 2010. Nous donnons vie à votre marque à travers des designs uniques et mémorables.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Liens rapides</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Portfolio</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-semibold mb-4">Contactez-nous</h4>
+                <address class="text-gray-400 not-italic">
+                    rue 13 lomé<br>
+                    lomé, togo<br>
+                    <a href="mailto:contact@ilogo.com" class="hover:text-white transition">contact@ilogo.com</a><br>
+                    <a href="tel:+33123456789" class="hover:text-white transition">+33 1 23 45 67 89</a>
+                </address>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 text-center text-gray-500">
+            <p>&copy; 2023 iLogo. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animation pour la flèche
+        document.addEventListener('DOMContentLoaded', function() {
+            const arrow = document.querySelector('.animate-bounce');
+            
+            setInterval(() => {
+                arrow.classList.toggle('animate-bounce');
+                setTimeout(() => {
+                    arrow.classList.toggle('animate-bounce');
+                }, 1000);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
